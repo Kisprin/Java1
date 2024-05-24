@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.teach.javafx.controller.base.ModificationController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <TableView fx:id="modificationTable" layoutX="15.0" layoutY="64.0" prefHeight="456.0" prefWidth="816.0" stylesheets="css/table.css">
+            <columns>
+                <TableColumn fx:id="rankColumn" prefWidth="75.0" sortable="false" text="序号" />
+                <TableColumn fx:id="nameColumn" prefWidth="87.0" text="姓名" />
+                <TableColumn fx:id="numColumn" prefWidth="104.0" text="学号" />
+                <TableColumn fx:id="typeColumn" prefWidth="73.0" text="类型" />
+                <TableColumn fx:id="timeColumn" prefWidth="221.60006713867188" text="修改时间" />
+                <TableColumn fx:id="changeColumn" prefWidth="255.20001220703125" text="操作" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

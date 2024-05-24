@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.teach.javafx.controller.base.AdminApplyController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <AnchorPane layoutY="56.0" prefHeight="654.0" prefWidth="862.0" style="-fx-background-color: FFFFFF;">
+            <children>
+                <Text fill="#464444" layoutX="21.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="记录" wrappingWidth="59.0">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text fill="#a19c9c" layoutX="20.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="student mangement" wrappingWidth="170.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fill="#0f8df7" layoutX="663.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="see all&gt;" wrappingWidth="86.0">
+                    <font>
+                        <Font name="Candara" size="17.0" />
+                    </font>
+                </Text>
+                <Text fill="#464444" layoutX="177.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询记录：" wrappingWidth="125.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="#464444" layoutX="30.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="总记录数：" wrappingWidth="131.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="#a19c9c" layoutX="30.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total records" wrappingWidth="131.0">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+                <Text fill="#a19c9c" layoutX="174.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="teacher management" wrappingWidth="131.0">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+                <AnchorPane layoutX="11.0" layoutY="209.0" prefHeight="465.0" prefWidth="1039.0">
+                    <children>
+                        <TableView fx:id="applyTable" layoutX="-3.0" layoutY="-16.0" prefHeight="485.0" prefWidth="875.0" stylesheets="css/table.css">
+                            <columns>
+                                <TableColumn fx:id="rankColumn" prefWidth="75.0" text="序号" />
+                                <TableColumn fx:id="nameColumn" prefWidth="106.0" text="申请人" />
+                                <TableColumn fx:id="beginTimeColumn" prefWidth="200.0" text="请假开始时间" />
+                                <TableColumn fx:id="endTimeColumn" prefWidth="158.39996337890625" text="请假结束时间" />
+                                <TableColumn fx:id="destinationColumn" prefWidth="196.79998779296875" text="前往地点" />
+                                <TableColumn fx:id="situationColumn" prefWidth="138.4000122070313" text="审批情况" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <Text fill="#464444" layoutX="344.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="刷新" wrappingWidth="125.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="#a19c9c" layoutX="345.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="refresh" wrappingWidth="131.0">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+                <Button layoutX="329.0" layoutY="79.0" mnemonicParsing="false" onAction="#refresh" opacity="0.0" prefHeight="103.0" prefWidth="142.0" text="refresh" />
+                <Text fx:id="maxNum" fill="#464444" layoutX="117.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="26.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text fx:id="queryNum" fill="#464444" layoutX="275.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="26.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="887.0" prefHeight="756.0" prefWidth="290.0" style="-fx-background-color: FFFFFF;">
+            <children>
+                <Text fill="#6b6060" layoutX="24.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ToolBar" wrappingWidth="142.0">
+                    <font>
+                        <Font name="Corbel Bold" size="29.0" />
+                    </font>
+                </Text>
+                <Text fill="#686161" layoutX="20.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: FFFFFF;" text="数据操作" wrappingWidth="252.0">
+                    <font>
+                        <Font name="Corbel Bold" size="27.0" />
+                    </font>
+                </Text>
+                <Text fill="#464444" layoutX="29.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="详情" wrappingWidth="131.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="#464444" layoutX="27.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="审批" wrappingWidth="131.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="#a19c9c" layoutX="29.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="more information" wrappingWidth="131.0">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+                <Text fill="#a19c9c" layoutX="28.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="change a record" wrappingWidth="131.0">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+                <Text fill="#464444" layoutX="27.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除" wrappingWidth="131.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="#a19c9c" layoutX="28.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="delete a record" wrappingWidth="131.0">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+                <Button layoutX="1.0" layoutY="136.0" mnemonicParsing="false" onAction="#applyViewButtonClick" opacity="0.0" prefHeight="112.0" prefWidth="270.0" text="Button" />
+                <Button layoutX="8.0" layoutY="252.0" mnemonicParsing="false" onAction="#applyEditButtonClick" opacity="0.0" prefHeight="112.0" prefWidth="270.0" text="Button" />
+                <Button layoutX="8.0" layoutY="382.0" mnemonicParsing="false" onAction="#deleteApply" opacity="0.0" prefHeight="112.0" prefWidth="270.0" text="Button" />
+            </children>
+        </AnchorPane>
+        <Text fill="#464444" layoutX="54.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生请假信息审批" wrappingWidth="233.70709228515625">
+            <font>
+                <Font name="Corbel Bold" size="29.0" />
+            </font>
+        </Text>
+        <Line endX="1152.0" endY="95.5" fill="#175375" startX="920.2929077148438" startY="95.5" stroke="#57a5dd" strokeWidth="2.0" />
+        <Text fx:id="timeField" fill="#a19c9c" layoutX="351.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2023/4/21 21:18" wrappingWidth="213.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <TextField fx:id="queryField" layoutX="676.0" layoutY="13.0" prefHeight="30.0" prefWidth="170.0" promptText="搜索" styleClass="search" stylesheets="css/table.css">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+        </TextField>
+        <Button fx:id="onQueryButtonClick" layoutX="675.0" layoutY="16.0" mnemonicParsing="false" onAction="#onQueryButtonClick" opacity="0.0" prefHeight="23.0" prefWidth="12.0" text="Button" />
+        <Text fill="#464444" layoutX="506.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="最近修改" wrappingWidth="131.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+        <Text fill="#a19c9c" layoutX="508.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="recently modified" wrappingWidth="131.0">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Text>
+        <Button layoutX="500.0" layoutY="129.0" mnemonicParsing="false" onAction="#modificationClick" opacity="0.0" prefHeight="103.0" prefWidth="142.0" text="refresh" />
+    </children>
+</AnchorPane>
